@@ -27,7 +27,4 @@ public class MainActivity extends AppCompatActivity {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
         quantityTextView.setText("" + number);
     }
-
-    //just testing to see if terminal commit would reflect in the main git
-
 }
