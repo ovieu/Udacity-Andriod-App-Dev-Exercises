@@ -30,7 +30,4 @@ public class MainActivity extends AppCompatActivity {
 
     //just testing to see if terminal commit would reflect in the main git
 
-    // and this test is done to see if commits made in an external terminal
-    // are visible to andriod studio
-
 }
