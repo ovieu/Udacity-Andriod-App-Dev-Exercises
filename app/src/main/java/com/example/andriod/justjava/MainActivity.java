@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public void submitOrder(View view) {
 
-        display(30000);
+        display(2);
+        displayPrice(2 * 5);
     }
 
     /**
