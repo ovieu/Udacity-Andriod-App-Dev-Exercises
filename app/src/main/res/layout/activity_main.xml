@@ -49,6 +49,7 @@
         android:layout_marginLeft="6dp"
         android:onClick="submitOrder"
         android:text="Order"
-        android:textAllCaps="true" />
+        android:textAllCaps="true"
+        android:onClick="submitOrder"/>
 
 </LinearLayout>
