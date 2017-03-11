@@ -24,6 +24,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * This method is called when the increment button is clicked.
+     */
+    public void increment(View view) {
+        int numberOfCoffees = 2;
+        ++numberOfCoffees;
+        display(numberOfCoffees);
+
+    }
+
+    /**
+     * This method is called when the decrement button is clicked.
+     */
+    public void decrement(View view) {
+        int numberOfCoffees = 2;
+        --numberOfCoffees;
+        display(numberOfCoffees);
+
+    }
+
+    /**
      * This method displays the given quantity value on the screen.
      */
     private void display(int number) {
