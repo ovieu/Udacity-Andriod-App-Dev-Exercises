@@ -8,6 +8,8 @@ import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
 
+    int numberOfCoffee = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,29 +20,27 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int numberOfCoffees = 2;
-        display(numberOfCoffees);
-        displayPrice(numberOfCoffees * 5);
+        displayPrice(numberOfCoffee * 5);
     }
 
     /**
      * This method is called when the increment button is clicked.
      */
     public void increment(View view) {
-        int quantity = 3;
-        display(quantity);
+        numberOfCoffee++;
+        display(numberOfCoffee);
     }
 
     /**
      * This method is called when the decrement button is clicked.
      */
     public void decrement(View view) {
-        int quantity = 1;
-        display(quantity);
+        numberOfCoffee--;
+        display(numberOfCoffee);
     }
 
     /**
-     * This method displays the given quantity value on the screen.
+     * This method displays the given numberOfCoffee value on the screen.
      */
     private void display(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
