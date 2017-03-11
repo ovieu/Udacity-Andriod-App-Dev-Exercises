@@ -29,17 +29,14 @@ public class MainActivity extends AppCompatActivity {
     public void increment(View view) {
         int quantity = 3;
         display(quantity);
-
     }
 
     /**
      * This method is called when the decrement button is clicked.
      */
     public void decrement(View view) {
-        int numberOfCoffees = 2;
-        --numberOfCoffees;
-        display(numberOfCoffees);
-
+        int quantity = 1;
+        display(quantity);
     }
 
     /**
