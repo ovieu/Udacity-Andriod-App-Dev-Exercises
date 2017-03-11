@@ -27,9 +27,8 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the increment button is clicked.
      */
     public void increment(View view) {
-        int numberOfCoffees = 2;
-        ++numberOfCoffees;
-        display(numberOfCoffees);
+        int quantity = 3;
+        display(quantity);
 
     }
 
