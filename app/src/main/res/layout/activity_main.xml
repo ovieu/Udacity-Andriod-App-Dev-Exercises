@@ -23,6 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="6dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
                 android:onClick="decrement"
                 android:text="-"
                 android:textAllCaps="true" />
@@ -33,17 +34,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="6dp"
                 android:layout_marginTop="14dp"
+                android:layout_marginRight="8dp"
                 android:text="0"
                 android:textAllCaps="true"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
-
+  android:layout_width="48dp"
             <Button
                 android:id="@+id/increment_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="6dp"
                 android:layout_marginTop="14dp"
+                android:layout_marginRight="8dp"
                 android:onClick="increment"
                 android:text="+"
                 android:textAllCaps="true" />
