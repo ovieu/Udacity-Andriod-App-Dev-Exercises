@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void increment(View view) {
         numberOfCoffee++;
-        display(numberOfCoffee);
+        displayQuantity(numberOfCoffee);
     }
 
     /**
@@ -37,13 +37,13 @@ public class MainActivity extends AppCompatActivity {
      */
     public void decrement(View view) {
         numberOfCoffee--;
-        display(numberOfCoffee);
+        displayQuantity(numberOfCoffee);
     }
 
     /**
      * This method displays the given numberOfCoffee value on the screen.
      */
-    private void display(int number) {
+    private void displayQuantity(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
         quantityTextView.setText("" + number);
     }
