@@ -43,9 +43,9 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method displays the given numberOfCoffee value on the screen.
      */
-    private void displayQuantity(int number) {
+    private void displayQuantity(int numberOfCoffee) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
-        quantityTextView.setText("" + number);
+        quantityTextView.setText("" + numberOfCoffee);
     }
 
     /**
