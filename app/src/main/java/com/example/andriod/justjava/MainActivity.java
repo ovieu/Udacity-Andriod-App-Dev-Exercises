@@ -20,8 +20,19 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        String priceMessage = "Amount Due " + "$" + (numberOfCoffee * 5) + "\n Thank you!";
+        int price = calculatePrice(numberOfCoffee);
+        String priceMessage = "Amount Due " + "$" + price + "\n Thank you!";
         displayMessage(priceMessage);
+
+    }
+
+    /**
+     * Calculates the price of the order based on the current quantity.
+     *@return the price
+     */
+    private int calculatePrice(int quantity) {
+        int price = quantity * 5;
+        return price;
     }
 
     /**
@@ -64,15 +75,6 @@ public class MainActivity extends AppCompatActivity {
         priceTextView.setText(message);
     }
 
-    /**
-     * Calculates the price of the order based on the current quantity.
-     *
-     * @return the price
-     */
-    private int calculatePrice(int quantity) {
-        int price = quantity * 5;
-        return price;
-    }
 }
 
 
