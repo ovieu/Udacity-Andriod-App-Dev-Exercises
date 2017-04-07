@@ -2,9 +2,9 @@ package com.example.andriod.justjava;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
@@ -25,10 +25,15 @@ public class MainActivity extends AppCompatActivity {
     public void submitOrder(View view) {
         CheckBox whippedCreamCheckBox = (CheckBox) findViewById(R.id.whipped_cream_checkBox);
         boolean hasWhippedCream = whippedCreamCheckBox.isChecked();
-        Log.v("MainActivity", "Has whipped cream: " + hasWhippedCream);
-
+        CheckBox chocolateCheckBox = (CheckBox) findViewById(R.id.chocolate_checkBox);
+        boolean hasChocolate = chocolateCheckBox.isChecked();
+        EditText nameField = (EditText) findViewById(R.id.name_field);
+        String customerName = nameField.getText().toString();
         int price = calculatePrice(numberOfCoffee);
-        String priceMessage = createOrderSummary(price, hasWhippedCream);
+        String priceMessage = createOrderSummary(price,
+                                                hasWhippedCream,
+                                                hasChocolate,
+                                                customerName);
         displayMessage(priceMessage);
         //String priceMessage = "Amount Due " + "$" + price + "\n Thank you!";
         //displayMessage(priceMessage);
@@ -49,10 +54,14 @@ public class MainActivity extends AppCompatActivity {
      *@param addWhippedCream indicates whether the user wants whipped cream
      *@return order message
      */
-    public String createOrderSummary(int priceOfOrder, boolean addWhippedCream) {
-        String orderMessage = "Name: Kaptain Kunal " + "\n"
+    public String createOrderSummary(int priceOfOrder,
+                                     boolean addWhippedCream,
+                                     boolean addChocolate,
+                                     String customerName) {
+        String orderMessage = "Name: " + customerName + "\n"
                             + "Quantity: " + numberOfCoffee + "\n"
                             + "Add Whipped Cream? " + addWhippedCream + "\n"
+                            + "Add Whipped Cream? " + addChocolate + "\n"
                             + "Total: $" + priceOfOrder + "\n"
                             + "Thank You!";
         return orderMessage;
